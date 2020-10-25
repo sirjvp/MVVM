@@ -41,16 +41,16 @@ public class DetailFragment extends Fragment {
     @BindView(R.id.genre_text)
     TextView genre;
 
-//    @BindView(R.id.detail_adult)
-//    TextView adult;
+    @BindView(R.id.adult_text)
+    TextView adult;
 
     @BindView(R.id.description_text)
     TextView description;
 
-    @BindView(R.id.popularity_text)
-    TextView popularity;
+//    @BindView(R.id.popularity_text)
+//    TextView popularity;
 
-    @BindView(R.id.release_text)
+    @BindView(R.id.date_text)
     TextView date;
 
 //    @BindView(R.id.detail_cast)
@@ -158,11 +158,11 @@ public class DetailFragment extends Fragment {
         Objects.requireNonNull(((MainActivity) requireActivity()).getSupportActionBar()).setTitle(tvShow.getTitle());
         Glide.with(getActivity()).load(tvShow.getCover()).centerCrop().into(cover);
         Glide.with(getActivity()).load(tvShow.getPoster()).centerCrop().into(poster);
-//        adult.setVisibility(View.INVISIBLE);
+        adult.setVisibility(View.INVISIBLE);
         title.setText(tvShow.getTitle());
 //        vote.setText(tvShow.getVote_average());
         description.setText(tvShow.getDescription());
-        popularity.setText(tvShow.getPopularity());
+//        popularity.setText(tvShow.getPopularity());
         date.setText(tvShow.getReleaseDate());
     }
 
@@ -170,16 +170,16 @@ public class DetailFragment extends Fragment {
         Objects.requireNonNull(((MainActivity) requireActivity()).getSupportActionBar()).setTitle(movie.getTitle());
         Glide.with(getActivity()).load(movie.getCover()).into(cover);
         Glide.with(getActivity()).load(movie.getPoster()).into(poster);
-//        adult.setVisibility(View.VISIBLE);
-//        if (movie.getAdult().equalsIgnoreCase("false")) {
-//            adult.setText("All age");
-//        } else {
-//            adult.setText("Adult");
-//        }
+        adult.setVisibility(View.VISIBLE);
+        if (movie.getAdult().equalsIgnoreCase("false")) {
+            adult.setText("All age");
+        } else {
+            adult.setText("Adult");
+        }
         title.setText(movie.getTitle());
 //        vote.setText(movie.getVote_average());
         description.setText(movie.getDescription());
-        popularity.setText(movie.getPopularity());
+//        popularity.setText(movie.getPopularity());
         date.setText(movie.getReleaseDate());
     }
 
