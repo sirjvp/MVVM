@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MVVM</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="movies">Movies</string>
+    <string name="tv_shows">TV Shows</string>
+    <string name="movie_name">Movie Name</string>
+    <string name="movie_popularity">Popularity</string>
+    <string name="movie_description">Description</string>
+    <string name="movie_casts">Casts</string>
+    <string name="cast_name">Name</string>
+    <string name="cast_role">Role</string>
+    <string name="movie_release">Release Date</string>
+    <string name="movie_vote">0</string>
+</resources>
